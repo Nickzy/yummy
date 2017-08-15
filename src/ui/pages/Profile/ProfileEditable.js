@@ -77,6 +77,7 @@ class ProfileEditable extends Component {
 
   render(){
     const { user } = this.props
+    console.log(user)
     const  { avatar, username } = user
     const hisAvatar = avatar ? `${Settings.host}/uploads/avatars/${avatar}` : 'http://media.haoduoshipin.com/yummy/default-avatar.png'
     const hisUsername = username ? username : 'no name'

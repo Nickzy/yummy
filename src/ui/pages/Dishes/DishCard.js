@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 class DishCard extends Component {
   render() {
     const { dish } = this.props
+    console.log(dish)
     return(
       <Link to={`/dish/${this.props.dishId}`} className="dish-card">
         <div style={{ 'backgroundImage' : `url(${dish.poster})` }}

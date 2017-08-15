@@ -2,13 +2,14 @@ let account = {
   currentUser: '',
   isAuthenticated: false,
   showAlert: false,
-  alertMessage: ''
+  alertMessage: '',
+  id:''
 }
 
 export default function accountReducer(state=account, action) {
   switch (action.type) {
     case 'AUTH_USER':
-      return { ...state, currentUser: action.username, isAuthenticated: true }
+      return { ...state, currentUser: action.username, id:action.id, isAuthenticated: true }
     case 'LOG_OUT':
       return { ...state, currentUser: '', isAuthenticated: false }
     case 'SHOW_ALERT':
